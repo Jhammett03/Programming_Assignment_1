@@ -4,7 +4,6 @@ import unittest
 
 
 # Write your test cases for each part below.
-
 class TestCases(unittest.TestCase):
     # Part 1
     def test_vowel_count(self):
