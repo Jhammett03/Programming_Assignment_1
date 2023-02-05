@@ -5,7 +5,7 @@ import data
 # Part 1
 def vowel_count(word: str) -> int:
     counter = 0
-    vowels = ["a","e","i","o","u","A","E","I","O","U"]
+    vowels = ["a","e","i","o","u"]
     for letters in word:
         if letters in vowels:
             counter += 1
