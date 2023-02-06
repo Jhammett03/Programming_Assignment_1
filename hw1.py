@@ -48,6 +48,7 @@ def rectangle_area(rectangle: data.Rectangle) -> float:
     return area
 
 # Part 6
+def books_by_author(author: str, books: list[data.Book]) -> list[data.Book]:
 
 
 # Part 7
