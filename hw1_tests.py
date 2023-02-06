@@ -64,11 +64,21 @@ class TestCases(unittest.TestCase):
         result = hw1.add_prices(input1, input2)
         expected = data.Price(4,55)
         self.assertEqual(expected, result)
-
     # Part 5
+    def test_rectangle_area(self):
+        input = data.Rectangle(data.Point(0,10), data.Point(10,0))
+        result = hw1.rectangle_area(input)
+        expected = 100
+        self.assertEqual(expected, result)
 
+    def test_negative_rectangle_area(self):
+        input = data.Rectangle(data.Point(-5,2), data.Point(5,-8))
+        result = hw1.rectangle_area(input)
+        expected = 100
+        self.assertEqual(expected, result)
 
     # Part 6
+
 
 
     # Part 7

@@ -40,11 +40,12 @@ def add_prices(price1: data.Price, price2: data.Price) -> data.Price:
    total_cents = total_cents % 100
    return data.Price(total_dollars, total_cents)
 
-
-
-
 # Part 5
-
+def rectangle_area(rectangle: data.Rectangle) -> float:
+    x_length = rectangle.bottom_right.x - rectangle.top_left.x
+    y_length = rectangle.top_left.y - rectangle.bottom_right.y
+    area = x_length * y_length
+    return area
 
 # Part 6
 
