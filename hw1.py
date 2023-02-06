@@ -1,3 +1,5 @@
+import math
+
 import data
 
 # Write your functions for each part in the space below.
@@ -58,7 +60,12 @@ def books_by_author(author: str, book_list: list[data.Book]) -> list[data.Book]:
 
 
 # Part 7
-
+def circle_bound(rect: data.Rectangle) -> data.Circle:
+    width = rect.bottom_right.x - rect.top_left.x
+    height = rect. bottom_right.y - rect.top_left.y
+    center = data.Point(rect.top_left.x + width / 2, rect.bottom_right.y - height / 2)
+    radius = math.sqrt((width) ** 2 + (height) **2)
+    return data.Circle(center, radius)
 
 # Part 8
 

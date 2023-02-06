@@ -90,7 +90,20 @@ class TestCases(unittest.TestCase):
         input2 = [data.Book(["Jared Hammett","Joe Mama"], "Book A"), data.Book(["Obama"], "Book B"), data.Book(["Author A", "Author B", "Joe Mama"], "Book C")]
         result = hw1.books_by_author(input1, input2)
         expected = [data.Book(["Jared Hammett", "Joe Mama"], "Book A"), data.Book(["Author A", "Author B", "Joe Mama"], "Book C")]
+        self.assertEqual(expected, result)
     # Part 7
+    def test_circle_bound(self):
+        input = data.Rectangle(data.Point(12,0), data.Point(0,5))
+        result = hw1.circle_bound(input)
+        expected = data.Circle(data.Point(6, 2.5), 13)
+        self.assertEqual(expected, result)
+
+
+    def test_circle_bound_negative(self):
+        input = data.Rectangle(data.Point(-10, 5), data.Point(-5,17))
+        result = hw1.circle_bound(input)
+        expected = data.Circle(data.Point(-7.5, 11), 13)
+        self.assertEqual(expected, result)
 
 
     # Part 8
