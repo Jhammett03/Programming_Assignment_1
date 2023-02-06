@@ -68,5 +68,14 @@ def circle_bound(rect: data.Rectangle) -> data.Circle:
     return data.Circle(center, radius)
 
 # Part 8
-
+def below_pay_average(employees: list[data.Employee]) -> list[str]:
+    total_pay = 0
+    below_average = []
+    for people in employees:
+        total_pay += people.pay_rate
+    average_pay = total_pay / len(employees)
+    for people in employees:
+        if people.pay_rate < average_pay:
+            below_average.append(people.name)
+    return below_average
 

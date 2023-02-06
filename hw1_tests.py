@@ -107,7 +107,17 @@ class TestCases(unittest.TestCase):
 
 
     # Part 8
+    def test_below_pay_average(self):
+        input = [data.Employee("Jared", 12), data.Employee("Joe", 20), data.Employee("David", 50)]
+        result = hw1.below_pay_average(input)
+        expected = ["Jared", "Joe"]
+        self.assertEqual(expected, result)
 
+    def test_below_pay_average_floats(self):
+        input = [data.Employee("Jared", 12.5), data.Employee("Joe", 20.5), data.Employee("David", 50.5)]
+        result = hw1.below_pay_average(input)
+        expected = ["Jared", "Joe"]
+        self.assertEqual(expected, result)
 
 
 
