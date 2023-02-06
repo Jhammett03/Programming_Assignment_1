@@ -33,8 +33,14 @@ def ascending_pairs(big_list: list[list[int]]) -> list:
         new_list.append(small_lists)
     return(new_list)
 
-
 # Part 4
+def add_prices(price1: data.Price, price2: data.Price) -> data.Price:
+   total_cents = 100 * (price1.dollars + price2.dollars) + price1.cents + price2.cents
+   total_dollars = total_cents // 100
+   total_cents = total_cents % 100
+   return data.Price(total_dollars, total_cents)
+
+
 
 
 # Part 5

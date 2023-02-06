@@ -51,7 +51,19 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected,result)
 
     # Part 4
+    def test_add_prices(self):
+        input1 = data.Price(3,99)
+        input2 = data.Price(1,99)
+        result = hw1.add_prices(input1, input2)
+        expected = data.Price(5,98)
+        self.assertEqual(expected, result)
 
+    def test_add_prices_2(self):
+        input1 = data.Price(3,50)
+        input2 = data.Price(1,5)
+        result = hw1.add_prices(input1, input2)
+        expected = data.Price(4,55)
+        self.assertEqual(expected, result)
 
     # Part 5
 
