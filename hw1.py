@@ -7,11 +7,20 @@ def vowel_count(word: str) -> int:
     counter = 0
     vowels = ["a","e","i","o","u"]
     for letters in word:
-        if letters in vowels:
+        if letters.lower() in vowels:
             counter += 1
     return(counter)
 
 # Part 2
+def short_lists(big_list: list[list[int]]) -> list:
+    new_list = []
+    for small_lists in big_list:
+        if len(small_lists) == 2:
+            for items in small_lists:
+                new_list.append(items)
+    return new_list
+
+
 
 
 # Part 3

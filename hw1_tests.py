@@ -19,7 +19,17 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 2
+    def test_short_lists(self):
+        input = [[1,2],[3,4,5],[6],[7,8]]
+        result = hw1.short_lists(input)
+        expected = [1,2,7,8]
+        self.assertEqual(expected,result)
 
+    def test_short_lists_none(self):
+        input = [[3,1,2],[1], ["hello"], ["a", "b", "c"]]
+        result = hw1.short_lists(input)
+        expected = []
+        self.assertEqual(expected, result)
 
     # Part 3
 
