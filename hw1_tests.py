@@ -78,9 +78,18 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 6
+    def test_books_by_author(self):
+        input1 = "Charles Dickens"
+        input2 = [data.Book(["Charles Dickens"], "A Tale of Two Cities"), data.Book(["John Steinbeck"], "Of Mice and Men"), data.Book(["Charles Dickens"], "A Christmas Carol")]
+        result = hw1.books_by_author(input1, input2)
+        expected = [data.Book(["Charles Dickens"], "A Tale of Two Cities"), data.Book(["Charles Dickens"], "A Christmas Carol")]
+        self.assertEqual(expected, result)
 
-
-
+    def test_books_by_author_multiple_authors(self):
+        input1 = "Joe Mama"
+        input2 = [data.Book(["Jared Hammett","Joe Mama"], "Book A"), data.Book(["Obama"], "Book B"), data.Book(["Author A", "Author B", "Joe Mama"], "Book C")]
+        result = hw1.books_by_author(input1, input2)
+        expected = [data.Book(["Jared Hammett", "Joe Mama"], "Book A"), data.Book(["Author A", "Author B", "Joe Mama"], "Book C")]
     # Part 7
 
 
