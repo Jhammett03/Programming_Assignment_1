@@ -21,9 +21,17 @@ def short_lists(big_list: list[list[int]]) -> list:
     return new_list
 
 
-
-
 # Part 3
+def ascending_pairs(big_list: list[list[int]]) -> list:
+    new_list = []
+    for small_lists in big_list:
+        if len(small_lists) == 2:
+            if small_lists[0] > small_lists[1]:
+                temp = small_lists[0]
+                small_lists[0] = small_lists[1]
+                small_lists[1] = temp
+        new_list.append(small_lists)
+    return(new_list)
 
 
 # Part 4

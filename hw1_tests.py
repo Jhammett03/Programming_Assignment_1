@@ -32,7 +32,23 @@ class TestCases(unittest.TestCase):
         self.assertEqual(expected, result)
 
     # Part 3
+    def test_ascending_pairs(self):
+        input = [[1,2],[2,1],[3,2,1]]
+        result = hw1.ascending_pairs(input)
+        expected = [[1,2],[1,2],[3,2,1]]
+        self.assertEqual(expected, result)
 
+    def test_ascending_pairs_reverse(self):
+        input = [[2,1],[3,2],[4,3],[5,4]]
+        result = hw1.ascending_pairs(input)
+        expected = [[1,2],[2,3],[3,4],[4,5]]
+        self.assertEqual(expected,result)
+
+    def test_ascending_pairs_extra(self):
+        input = [[5,4], [4,1,5,6], [7,1,2], [9,8]]
+        result = hw1.ascending_pairs(input)
+        expected = [[4,5], [4,1,5,6], [7,1,2], [8,9]]
+        self.assertEqual(expected,result)
 
     # Part 4
 
